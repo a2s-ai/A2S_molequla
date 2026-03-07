@@ -55,7 +55,7 @@ Every organism in the ecology follows this decomposition:
 α = modulation   (seasonal/contextual scaling of δ)
 ```
 
-This is not a metaphor. It is the literal architecture:
+This is the architecture:
 
 - **ε** is the weight matrices (wte, wpe, wq, wk, wv, wo, fc_g, fc_v, fc2, lm_head). Initialized random, shaped by warmup training.
 - **γ** is computed as the diff between current wte and the snapshot taken at birth. `ComputeGamma()` returns the contrastive projection — a unit vector pointing in the direction of maximum personality drift. Sparsity, magnitude, and top-changed tokens are tracked.
